@@ -1,0 +1,66 @@
+//Variable Declartion
+$font-stack:    		Helvetica, sans-serif;
+$primary-color: 		#333;
+$gray-color:			#ededed;
+$border-color:			lighten($primary-color,60);
+$white-color:			#fff;
+//border Radius Mixin
+@mixin border_radius($width){
+  -webkit-border-radius: $width !important;
+  -moz-border-radius: $width !important;
+  border-radius: $width !important;
+}
+
+h4 {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+.form-group{
+	width: 400px;
+	margin-bottom: 10px;
+	@include border_radius(4px);
+}
+header{
+	height: 40px;
+	background-color: $gray-color;
+	border: 1px solid  $border-color;
+	padding: 7px;
+    line-height: 36px;
+    margin: -8px;
+}
+.form-control{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: $primary-color;
+	vertical-align: middle;
+	background-color: $white-color;
+	border: 1px solid $border-color;
+	@include border_radius(4px);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.img_block{
+	img{
+		width: 100%;
+	}
+}
+.content_block{
+	text-align:center;
+	.make_name{
+	font-size:20px;
+	color:$primary-color;
+	}
+	.model_name{
+		font-size:16px;
+		color:lighten($primary-color, 40);
+	}
+}
+
+

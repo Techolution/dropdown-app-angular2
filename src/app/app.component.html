@@ -1,0 +1,25 @@
+<header>Dropdown App</header>
+<h4>{{title}}</h4>
+<div class="form-group">
+<select name="role" class="form-control" [(ngModel)]="MakeValue" (change)="makeSelect($event.target.value)">
+	<option value="0"> -Select Make - </option>
+	<option *ngFor="let item of makemodellist" [value]="item.Value" class="make">
+		{{item.Value}}
+	</option>
+</select>
+</div>
+<div class="form-group" *ngIf="MakeValue !=0" >
+<select name="role" class="form-control" [(ngModel)]="ModelValue" (change)="modelSelect($event.target.value)">
+	<option value="0">-Select Model-</option>
+	<option *ngFor="let model of makemodellistData.Associated" [value]="model.Value">
+		{{model.Value}}
+	</option>
+</select>
+</div>
+<div class="form-group" *ngIf="ModelValue !=0">
+<div class="content_block">
+	<span class="make_name">{{MakeValue}}</span>
+	<span class="model_name">{{ModelValue}}</span>
+</div>
+<div class="img_block"><img  width="100%" [src]="modelImgUrl"></div>
+</div>

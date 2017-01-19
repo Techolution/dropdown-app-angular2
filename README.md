@@ -14,8 +14,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
   Using a TDD approach (Jasmine), running test case with Karma
   
   
-  On Angular 2 
-  Also used Mongo DB to store and retrieve the data with MongoJS
+  ## On Angular 2 
+  ## Also used Mongo DB to store and retrieve the data with MongoJS
   Used Express to write the Rest API to access the data and pass back to the UI.
   This application was created as a Node Project and you can run it by running the nodeserver.js.
   The Styling is writtin using SASS once you do `ng-build` it will compile into the css. 

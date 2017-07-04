@@ -1,20 +1,19 @@
 # DropDownApp
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
-## Intsall npm
- `npm install`
-## Development server
-Run `ng build` and then `node server` for a dev server. Navigate to `http://localhost:7000/`.
+This is a ref architecture used to test mongodb and nodejs.
 
-## Running unit tests
+## Clone
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Clone the respository.
 
-## Test Aproach
-  - Using a TDD approach (Jasmine), running test case with Karma
-  - On Angular 2 
-  - Also used Mongo DB to store and retrieve the data with MongoJS
-  - Used Express to write the Rest API to access the data and pass back to the UI.
-  - This application was created as a Node Project and you can run it by running the nodeserver.js.
-  - The Styling is writtin using SASS once you do `ng-build` it will compile into the css. 
+ 'git clone https://github.com/Techolution/dropdown-app-angular2.git'
 
+## Configure nodejs to talk to mongo
+
+Open the server.js file.  Change the below line and update it with the correct username/password and host of where the mongodb will live
+
+ `var db = mongojs('username:password@example.com/modelMake', ['modelMakeList'])`
+
+## Build docker image
+
+Update the Dockerfile so that it will generate an image.

@@ -3,7 +3,9 @@ var app = express()
 
 app.use(express.static(__dirname + '/dist'))
 var mongo = require('mongojs')
-var db = mongo('modelMake',['modelMakeList'])
+//var db = mongo('modelMake',['modelMakeList'])
+// we can also provide some credentials 
+var db = mongojs('username:password@example.com/modelMake', ['modelMakeList'])
 var data = [  
    {  
       "Key":"Ford",
